@@ -1,19 +1,16 @@
+
 /*
 Question 2 :
-W.A.P that accepts two strings as CLA and print welcome message as given below
-
-input : Johnny Sins
-output : Welcome Johnny Sins
+W.A.P that accepts two integers as C.L.A and print the sum of the two numbers
 
 */
 
-import java.util.Scanner;
 public class Assignment_2
 {
 	public static void main(String[] args) {
-	    Scanner input = new Scanner(System.in);
-	    int a = input.nextInt();
-	    int b = input.nextInt();
+	    int a = Integer.parseInt(args[0]);
+	    int b = Integer.parseInt(args[1]);
+
 	    System.out.println(a+b);
 	}
 }
