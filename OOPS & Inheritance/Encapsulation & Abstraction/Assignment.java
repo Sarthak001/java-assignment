@@ -8,6 +8,11 @@ class Author{
         this.email = email;
         this.gender = gender;
     }
+    String getdetails(){
+        String str = "";
+        str += ("Author Name: " + a_name + " Email Address: " + email + " Gender: " + gender);
+        return str;
+    }
 }
 
 class Book{
@@ -24,7 +29,10 @@ class Book{
 	}
 
     public String alldetails(){
-        
+        String res = "";
+        res += "Book Name: " + b_name + " Price: " + price  + " QuantityInStock: " + qtyInStock + "\n" ;
+        res += author.getdetails() + "\n";
+        return res;
     }
 }
 
@@ -33,7 +41,7 @@ public class Assignment{
     public static void main(String[] args) {
         Author auth = new Author("vaibhav","vaibhav@123.com", 'M');
         Book book = new Book("biography", auth, 150.0, 69);
-        System.out.println(book);
+        System.out.println(book.alldetails());
 
     }
 }
