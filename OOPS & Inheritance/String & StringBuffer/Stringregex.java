@@ -1,19 +1,20 @@
-public class Stringregex {
-    
-    public static String regex(String str1){
-        String res_str;
-        int index = str1.indexOf("*");
+import java.util.Scanner;
 
-        return res_str;
-    }
-    public static void main(String[] args) {
-        if(args.length < 1 || args.length > 1){
-            System.err.println("Invaild Arguments");
-        }
-        else{
-            System.out.println(args[0]);
-            regex(args[0]);
-        }
-    }
+public class Stringregex {
+
+	public static void main(String[] args) {
+		Scanner scan = new Scanner(System.in);
+		System.out.print("Enter the string: ");
+		String str = scan.nextLine();
+		
+		String[] stars = str.split(".[\\*]+.");
+		
+		StringBuffer sb = new StringBuffer();
+		
+		for (String x : stars)
+			sb.append(x);
+		
+		System.out.println(sb);
+	}
+
 }
-asdasdsad
